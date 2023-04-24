@@ -1,0 +1,30 @@
+﻿@page
+
+@* // 不設container的話，會是滿版有點麻煩，先設container裝進去 *@
+<style>
+    .container {
+        width: 500px;
+    }
+</style>
+
+@* // 畫圖 *@
+<div class="container">
+    <canvas id="VoteChart"></canvas>
+</div>
+
+@* // 單選 *@
+<button value="Red" onclick="Votselect('Red')">Red</button></br>
+<button value="Blue" onclick="Votselect('Blue')">Blue</button></br>
+<button value="Yellow" onclick="Votselect('Yellow')">Yellow</button></br>
+<button value="Green" onclick="Votselect('Green')">Green</button></br>
+<button value="Purple" onclick="Votselect('Purple')">Purple</button></br>
+<button value="Orange" onclick="Votselect('Orange')">Orange</button></br>
+</br>
+<button value="Reset" onclick="VoteReset()">Reset</button></br>
+
+@* // 畫圖的api *@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+@* // signalr的api *@
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+@* // 要用的js檔 *@
+<script src="~/js/chart.js"></script>
